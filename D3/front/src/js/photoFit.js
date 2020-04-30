@@ -22,6 +22,7 @@ PhotoFit.prototype.listenLoadAllDataEvent = function () {
                     self.listenAddImageEvent(photoItem);
                     self.listenCloseBtnEvent(photoItem);
                     self.listenSavePhotoBtnEvent(photoItem);
+                    self.listenExtractDataEvent(photoItem);
                 }
             }
         }
@@ -56,6 +57,7 @@ PhotoFit.prototype.createPhotoBtnEvent = function () {
     self.listenAddImageEvent(photoItem);
     self.listenCloseBtnEvent(photoItem);
     self.listenSavePhotoBtnEvent(photoItem);
+    self.listenExtractDataEvent(photoItem);
 };
 
 // 添加点击添加图片事件
@@ -164,54 +166,41 @@ PhotoFit.prototype.listenAddBannerEvent = function () {
     });
 };
 
+// 监听提交当前照片事件
+PhotoFit.prototype.listenExtractDataEvent = function (photoItem) {
+    var self = this;
+    var extractDataBtn = photoItem.find(".extract-data-btn");
 
-// 提取数据
-// function ExtractData() {
-//      this.dataListGroup = $(".data-list-group");
-// }
-//
-// // 监听创建模型事件
-// ExtractData.prototype.listenAddModelEvent = function () {
-//     var self = this;
-//
-// };
-//
-// // 提交当前照片
-// ExtractData.prototype.listenExtractDataEvent = function () {
-//     var self = this;
-//
-//     var dataItem = self.dataListGroup.find(".data-item:last");
-//     var extractDataBtn = dataItem.find(".extract-data-btn");
-//
-//     extractDataBtn.click(function () {
-//         console.log("hello--------");
-//         var tpl = template("data-item");
-//         self.dataListGroup.prepend(tpl);
-//         var thumbnailTag = dataItem.find(".thumbnail");
-//
-//         // 获取img图片的src属性对应的值，只需要调用attr()函数就可以了，并不需要调用val()
-//         var img_url = thumbnailTag.attr("src");
-//
-//         antajax.post({
-//             'url': '/extract/data/',
-//             'data': {
-//                 'img_url': img_url,
-//             },
-//             'success': function (result) {
-//                 if (result['code'] === 200) {
-//                     window.messageBox.showSuccess("图片处理成功！！");
-//                     console.log(result['data']['dst_image']);
-//                 }
-//             }
-//         });
-//     });
-//
-// };
-//
-// ExtractData.prototype.run = function() {
-//     this.listenExtractDataEvent();
-// };
-//
+    extractDataBtn.click(function () {
+        // var tpl = template("data-item");
+        // self.dataListGroup.prepend(tpl);
+        var thumbnailTag = photoItem.find(".thumbnail");
+
+        // 获取img图片的src属性对应的值，只需要调用attr()函数就可以了，并不需要调用val()
+        var img_url = thumbnailTag.attr("src");
+
+        // console.log(img_url);
+
+        antajax.post({
+            'url': '/extract/data/',
+            'data': {
+                'img_url': img_url,
+            },
+            'success': function (result) {
+                if (result['code'] === 200) {
+                    window.messageBox.showSuccess("图片处理成功！！");
+                    // console.log(result['data']);
+                }
+            }
+        });
+    });
+
+};
+
+PhotoFit.prototype.run = function() {
+    this.listenExtractDataEvent();
+};
+
 PhotoFit.prototype.run = function () {
     this.listenAddBannerEvent();
     this.listenLoadAllDataEvent();
@@ -220,7 +209,4 @@ PhotoFit.prototype.run = function () {
 $(function () {
     var photo = new PhotoFit();
     photo.run();
-
-    // var data = new ExtractData();
-    // data.run();
 });

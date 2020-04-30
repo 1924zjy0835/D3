@@ -9,7 +9,7 @@ from utils.captcha import restful
 from .models import PhotosModel, User
 from .forms import PhotoForm, ExtractDataForm
 
-from .serializers import PhotoSerlizer
+from .serializers import PhotoSerlizer, ModelPhotoSerlizer
 
 import numpy as np
 import cv2 as cv
@@ -72,16 +72,32 @@ def photo_del(request):
     return restful.httpResult(message="您要删除的照片已经删除成功了~~")
 
 
+# 将模型图片进行序列化
+def modelPhoto_serialize(request):
+    modelPhotos = PhotosModel.objects.all()
+    serializers = ModelPhotoSerlizer(modelPhotos, many=True)
+    return restful.httpResult(data=serializers.data)
+
+
 # 定义提取照片数据视图函数
 def extract_data(request):
     form = ExtractDataForm(request.POST)
     if form.is_valid():
         img_url = form.cleaned_data.get('img_url')
+
+        print(img_url)
         resp = urllib.urlopen(img_url)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
         image = cv.imdecode(image, cv.IMREAD_COLOR)
         dst_image = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-        return restful.httpResult(data={'dst_image': dst_image})
+        print(dst_image.shape)
+        cv.imshow("dst_image", dst_image)
+        cv.waitKey(0)
+        cv.destroyAllWindows()
+
+        modelPhotos = PhotosModel.objects.all()
+        serializers = ModelPhotoSerlizer(modelPhotos, many=True)
+        return restful.httpResult(data=serializers.data)
     else:
         return restful.params_error(message=form.errors.get_json_data())
 
