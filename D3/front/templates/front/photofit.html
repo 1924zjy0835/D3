@@ -40,17 +40,14 @@
     <div class="photos-list-group">
         {% csrf_token %}
     </div>
-    <!--
-    <div class="data-list-group pull-left" style="margin-left: 40px;">
-    </div>
-    -->
+
     <!--注意这里只能是使用id,不能够使用class,否者的话，在使用arttemplate添加框架的时候，就不够找到-->
     <script id="photos-item" type="text/html">
         {% verbatim %}
         {{ if photo }}
-        <div class="box photos-item pull-left" data-photo-id="{{ photo.id }}">
+        <div class="box photos-item" data-photo-id="{{ photo.id }}">
             {{ else }}
-            <div class="box photos-item pull-left">
+            <div class="box photos-item">
                 {{ /if }}
                 <div class="box-header">
                     {{ if photo }}
@@ -83,23 +80,36 @@
                 </div>
             </div>
 
-            <div class="box data-item pull-right" style="width: 940px;">
-                <div class="box-header">
-                    <span class="pub-time">模型提取时间：</span>
-                    <button class="btn-default btn-xs pull-right close-btn">
-                        <i class="fa fa-close"></i>
-                    </button>
-                </div>
-                <div class="box-body">
-                    <div class="thumbnail-group">
-                        <img src="/static/images/AntModel03.min.jpg" alt="" class="modelThumbnail"
-                             style="cursor: pointer; margin-left: 10px;">
+            {{ if model }}
+            <div class="box data-item" data-model-id="{{ model.id }}">
+                {{ else }}
+                <div class="box data-item">
+                    {{ /if }}
+                    <div class="box-header">
+                        {{ if model }}
+                        <span class="pub-time">模型提取时间：{{ model.pub_time }}</span>
+                        {{ else }}
+                        <span class="pub-time">示例模型</span>
+                        {{ /if }}
+                        <button class="btn-default btn-xs pull-right close-model-btn">
+                            <i class="fa fa-close"></i>
+                        </button>
+                    </div>
+                    <div class="box-body">
+                        <div class="thumbnail-group">
+                            {{ if model }}
+                            <img src="{{ model.model_url }}" alt="" class="modelThumbnail"
+                                 style="cursor: pointer; margin-left: 10px;">
+                            {{ else }}
+                            <img src="/static/images/AntModel03.min.jpg" alt="" class="modelThumbnail"
+                                 style="cursor: pointer; margin-left: 10px; margin-bottom: 20px;">
+                            {{ /if }}
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button class="btn btn-primary pull-right save-btn">保存模型</button>
                     </div>
                 </div>
-                <div class="box-footer">
-                    <button class="btn btn-primary pull-right save-btn">保存模型</button>
-                </div>
-            </div>
-            {% endverbatim %}
+                {% endverbatim %}
     </script>
 {% endblock %}

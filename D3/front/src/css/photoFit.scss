@@ -19,6 +19,8 @@
 
 .photos-item {
   width: 300px;
+  //height: 480px;
+  float: left;
 
   .box-header {
 
@@ -42,11 +44,13 @@
 }
 
 .data-item {
-  width: 300px;
+  width: 940px;;
+  //height: 480px;
+  float: right;
 
   .box-header {
 
-    .close-btn {
+    .close-model-btn {
       // 清除按钮点击时的颜色
       outline: none;
       // 清除按钮的高度
@@ -58,6 +62,11 @@
       width: 100%;
 
       .thumbnail {
+        width: 260px;
+        height: 340px;
+      }
+
+      .modelThumbnail {
         width: 260px;
         height: 340px;
       }

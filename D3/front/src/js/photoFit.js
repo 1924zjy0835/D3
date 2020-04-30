@@ -1,4 +1,3 @@
-
 // 添加照片
 function PhotoFit() {
     this.photoListGroup = $(".photos-list-group");
@@ -12,17 +11,21 @@ PhotoFit.prototype.listenLoadAllDataEvent = function () {
         'success': function (result) {
             if (result['code'] === 200) {
                 var photos = result['data'];
-                for (var i=0; i<photos.length; i++) {
+                for (var i = 0; i < photos.length; i++) {
                     var photo = photos[i];
                     var tpl = template('photos-item', {'photo': photo});
                     self.photoListGroup.append(tpl);
 
                     // 为新添加的photo添加关闭、保存事件
                     var photoItem = self.photoListGroup.find(".photos-item:last");
+                    var dataItem = self.photoListGroup.find(".data-item:last");
                     self.listenAddImageEvent(photoItem);
                     self.listenCloseBtnEvent(photoItem);
                     self.listenSavePhotoBtnEvent(photoItem);
                     self.listenExtractDataEvent(photoItem);
+                    self.listenDisplayPersonModelEvent(photoItem);
+                    self.listenRemoveModelEvent(photoItem);
+                    self.listenLoadAllModelEvent(dataItem);
                 }
             }
         }
@@ -53,14 +56,18 @@ PhotoFit.prototype.createPhotoBtnEvent = function () {
 
     // 添加点击事件必须在添加tpl到网页中之后
     var photoItem = self.photoListGroup.find(".photos-item:first");
+    var dataItem = self.photoListGroup.find(".data-item:last");
 
     self.listenAddImageEvent(photoItem);
     self.listenCloseBtnEvent(photoItem);
     self.listenSavePhotoBtnEvent(photoItem);
     self.listenExtractDataEvent(photoItem);
+    self.listenDisplayPersonModelEvent(photoItem);
+    self.listenRemoveModelEvent(photoItem);
+    self.listenLoadAllModelEvent(dataItem);
 };
 
-// 添加点击添加图片事件
+// 添加点击添加图片事件,将图片保存至本地服务器
 PhotoFit.prototype.listenAddImageEvent = function (photoItem) {
     var thumbnail = photoItem.find(".thumbnail");
     var imageInput = photoItem.find(".image-input");
@@ -89,7 +96,7 @@ PhotoFit.prototype.listenAddImageEvent = function (photoItem) {
             'success': function (result) {
                 if (result['code'] === 200) {
                     var url = result['data']['url'];
-                    thumbnail.attr('src',url);
+                    thumbnail.attr('src', url);
                 }
             }
         });
@@ -124,7 +131,7 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
                     });
                 }
             });
-        }else {
+        } else {
             photoItem.remove();
         }
     });
@@ -166,6 +173,8 @@ PhotoFit.prototype.listenAddBannerEvent = function () {
     });
 };
 
+
+// 模型有关
 // 监听提交当前照片事件
 PhotoFit.prototype.listenExtractDataEvent = function (photoItem) {
     var self = this;
@@ -188,8 +197,7 @@ PhotoFit.prototype.listenExtractDataEvent = function (photoItem) {
             },
             'success': function (result) {
                 if (result['code'] === 200) {
-                    window.messageBox.showSuccess("图片处理成功！！");
-                    // console.log(result['data']);
+                    window.messageBox.showSuccess(result['message']);
                 }
             }
         });
@@ -197,7 +205,88 @@ PhotoFit.prototype.listenExtractDataEvent = function (photoItem) {
 
 };
 
-PhotoFit.prototype.run = function() {
+// 将经过OpenCV处理保存至本地服务器的照片显示在前端
+PhotoFit.prototype.listenDisplayPersonModelEvent = function (photoItem) {
+    var self = this;
+
+    var dataItem = photoItem.find(".data-item");
+    var modeThumbnailTag = dataItem.find(".modelThumbnail");
+    var extractDataBtn = photoItem.find(".extract-data-btn");
+
+    extractDataBtn.click(function () {
+
+        antajax.get({
+            'url': '/model/serialize/',
+            'success': function (result) {
+                if (result['code'] === 200) {
+                    var models = result['data'];
+                    for (var i = 0; i < models.length; i++) {
+                        // var model = models[i];
+                        // var tpl = template('photos-item', {'model': model});
+                        // self.photoListGroup.append(tpl);
+                        url = result['data']['model_url'];
+                        console.log(result['data']);
+                        console.log(url);
+                        console.log(result['data']['id']);
+                        modeThumbnailTag.attr('src', url);
+                    }
+                }
+            }
+        });
+    });
+};
+
+// 删除模型
+PhotoFit.prototype.listenRemoveModelEvent = function (photoItem) {
+    var self = this;
+    var modelCloseBtn = photoItem.find('.close-model-btn');
+
+    modelCloseBtn.click(function () {
+        var modelId = photoItem.attr("data-model-id");
+        console.log(modelId);
+
+        if (modelId) {
+            antalert.alertConfirm({
+            'text': '您确定要删除该模型吗？无法撤销哦！~~~',
+            'confirmCallback': function () {
+                antajax.post({
+                    'url': '/del/model/',
+                    'data': {
+                        'model_id': modelId,
+                    },
+                    'success': function (result) {
+                        var dataItem = photoItem.find(".data-item");
+                        dataItem.remove();
+                        window.messageBox.showSuccess(result['message']);
+                    }
+                });
+            }
+        });
+        }
+    });
+};
+
+// 加载所有的模型
+PhotoFit.prototype.listenLoadAllModelEvent = function (dataItem) {
+    var self = this;
+
+    var thumbnail = dataItem.find(".modelThumbnail");
+
+    antajax.get({
+        'url': '/model/serialize/',
+        'success': function (result) {
+            if (result['code'] === 200) {
+                var models = result['data'];
+                for (var i = 0; i < models.length; i++) {
+                    var url = result['data']['model_url'];
+                    thumbnail.attr('src', url);
+                }
+            }
+        }
+    });
+};
+
+PhotoFit.prototype.run = function () {
     this.listenExtractDataEvent();
 };
 

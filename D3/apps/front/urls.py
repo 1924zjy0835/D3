@@ -12,4 +12,6 @@ urlpatterns = [
     path('save/photo/',views.photoSave, name='photo_save'),
     path('del/photo/',views.photo_del, name='photo_del'),
     path('extract/data/',views.extract_data, name='extract_data'),
+    path('model/serialize/', views.modelPhoto_serialize, name='model_serialize'),
+    path('del/model/', views.model_del, name='model_del'),
 ]

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import PhotosModel
+from .models import PhotosModel, PersonModelsModel
 
 
 class PhotoSerlizer(serializers.ModelSerializer):
@@ -11,5 +11,5 @@ class PhotoSerlizer(serializers.ModelSerializer):
 class ModelPhotoSerlizer(serializers.ModelSerializer):
 
     class Meta:
-        model = PhotosModel
-        fields = ('id','img_url')
+        model = PersonModelsModel
+        fields = ('id', 'model_url')

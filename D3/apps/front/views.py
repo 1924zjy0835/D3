@@ -6,7 +6,7 @@ from django.conf import settings
 
 from utils.captcha import restful
 
-from .models import PhotosModel, User
+from .models import PhotosModel, User, PersonModelsModel
 from .forms import PhotoForm, ExtractDataForm
 
 from .serializers import PhotoSerlizer, ModelPhotoSerlizer
@@ -32,7 +32,6 @@ def StorageRoom(request):
 def photo_list(request):
     photos = PhotosModel.objects.all()
     serializers = PhotoSerlizer(photos, many=True)
-
     return restful.httpResult(data=serializers.data)
 
 
@@ -67,37 +66,51 @@ def photoSave(request):
 # 定义删除photo视图函数
 def photo_del(request):
     photo_id = request.POST.get('photo_id')
-    print(photo_id)
     PhotosModel.objects.filter(pk=photo_id).delete()
     return restful.httpResult(message="您要删除的照片已经删除成功了~~")
 
 
-# 将模型图片进行序列化
-def modelPhoto_serialize(request):
-    modelPhotos = PhotosModel.objects.all()
-    serializers = ModelPhotoSerlizer(modelPhotos, many=True)
-    return restful.httpResult(data=serializers.data)
-
-
-# 定义提取照片数据视图函数
+# 定义提取照片视图函数
 def extract_data(request):
     form = ExtractDataForm(request.POST)
     if form.is_valid():
         img_url = form.cleaned_data.get('img_url')
-
-        print(img_url)
         resp = urllib.urlopen(img_url)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
         image = cv.imdecode(image, cv.IMREAD_COLOR)
         dst_image = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-        print(dst_image.shape)
-        cv.imshow("dst_image", dst_image)
-        cv.waitKey(0)
-        cv.destroyAllWindows()
+        ROOT = settings.MEDIA_ROOT
+        cv.imwrite(os.path.join(ROOT, 'personModel.jpg'), dst_image)
 
-        modelPhotos = PhotosModel.objects.all()
-        serializers = ModelPhotoSerlizer(modelPhotos, many=True)
-        return restful.httpResult(data=serializers.data)
+        url = request.build_absolute_uri(settings.MEDIA_URL + 'personModel.jpg')
+
+        # cv.imshow("dst_image", dst_image)
+        # cv.waitKey(0)
+        # cv.destroyAllWindows()
+
+        # 保存经过处理的照片
+        PersonModelsModel.objects.create(model_url=url)
+
+
+        # modelPhotos = PhotosModel.objects.all()
+        # serializers = ModelPhotoSerlizer(modelPhotos, many=True)
+        # dataSer = serializers.data
+        # dataSer['model_url'] = url
+        return restful.httpResult(message="图片处理完成，已保存！")
     else:
         return restful.params_error(message=form.errors.get_json_data())
 
+
+# 将模型图片进行序列化
+def modelPhoto_serialize(request):
+    modelPhotos = PersonModelsModel.objects.all()
+    serializers = ModelPhotoSerlizer(modelPhotos, many=True)
+    return restful.httpResult(data=serializers.data)
+
+
+# 删除创建的Person模型
+def model_del(request):
+    model_id = request.POST.get("model_id")
+    if model_id:
+        PersonModelsModel.objects.filter(pk=model_id).delete()
+    return restful.httpResult(message="您要删除的模型已经删除成功了~~")

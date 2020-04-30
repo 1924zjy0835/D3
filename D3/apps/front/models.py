@@ -68,3 +68,12 @@ class PhotosModel(models.Model):
     class Meta:
         db_table = 'photos'
         ordering = ['-pub_time']
+
+
+class PersonModelsModel(models.Model):
+    pub_time = models.DateTimeField(auto_now_add=True)
+    model_url = models.URLField()
+
+    class Meta:
+        db_table = 'person_model'
+        ordering = ['-pub_time']
