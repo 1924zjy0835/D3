@@ -24,7 +24,6 @@ PhotoFit.prototype.listenLoadAllDataEvent = function () {
                     self.listenSavePhotoBtnEvent(photoItem);
                     self.listenExtractDataEvent(photoItem);
                     self.listenDisplayPersonModelEvent(photoItem);
-                    self.listenRemoveModelEvent(photoItem);
                     self.listenLoadAllModelEvent(dataItem);
                 }
             }
@@ -63,7 +62,6 @@ PhotoFit.prototype.createPhotoBtnEvent = function () {
     self.listenSavePhotoBtnEvent(photoItem);
     self.listenExtractDataEvent(photoItem);
     self.listenDisplayPersonModelEvent(photoItem);
-    self.listenRemoveModelEvent(photoItem);
     self.listenLoadAllModelEvent(dataItem);
 };
 
@@ -109,11 +107,14 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
     var self = this;
     // var closeBtn = $(".close-btn");
     var closeBtn = photoItem.find(".close-btn");
+    // var closeModelBtn = photoItem.find(".close-model-btn");
 
     closeBtn.click(function () {
         // var photoItem = $(".photos-item");
         // photoItem.remove();
         var photoId = photoItem.attr("data-photo-id");
+
+        var modelItem = self.photoListGroup.find(".data-item");
 
         if (photoId) {
             antalert.alertConfirm({
@@ -126,6 +127,7 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
                         },
                         'success': function (result) {
                             photoItem.remove();
+                            modelItem.remove();
                             window.messageBox.showSuccess(result['message']);
                         }
                     });
@@ -133,6 +135,7 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
             });
         } else {
             photoItem.remove();
+            modelItem.remove();
         }
     });
 };
@@ -210,7 +213,9 @@ PhotoFit.prototype.listenDisplayPersonModelEvent = function (photoItem) {
     var self = this;
 
     var dataItem = photoItem.find(".data-item");
-    var modeThumbnailTag = dataItem.find(".modelThumbnail");
+
+    var modelThumbnail = photoItem.find(".modelThumbnail");
+
     var extractDataBtn = photoItem.find(".extract-data-btn");
 
     extractDataBtn.click(function () {
@@ -219,52 +224,36 @@ PhotoFit.prototype.listenDisplayPersonModelEvent = function (photoItem) {
             'url': '/model/serialize/',
             'success': function (result) {
                 if (result['code'] === 200) {
-                    var models = result['data'];
+                    // var models = result['data'];
+                    // for (var i = 0; i < models.length; i++) {
+                    //     // var model = models[i];
+                    //     // var tpl = template('photos-item', {'model': model});
+                    //     // self.photoListGroup.append(tpl);
+                    //     url = result['data']['model_url'];
+                    //     console.log(result['data']);
+                    //     console.log(url);
+                    //     console.log(result['data']['id']);
+                    //     modeThumbnailTag.attr('src', url);
+                    // }
+
+                    models = result['data'];
                     for (var i = 0; i < models.length; i++) {
-                        // var model = models[i];
-                        // var tpl = template('photos-item', {'model': model});
-                        // self.photoListGroup.append(tpl);
-                        url = result['data']['model_url'];
-                        console.log(result['data']);
+                        var model = models[i];
+                        var tpl = template('photos-item', {'model': model});
+                        self.photoListGroup.append(tpl);
+                        url = result['data'][i]['model_url'];
                         console.log(url);
-                        console.log(result['data']['id']);
-                        modeThumbnailTag.attr('src', url);
+                        modelThumbnail.attr('src', url);
                     }
+
+                    // url = result['data'][0]['model_url'];
+                    // modelThumbnail.attr("src", url);
                 }
             }
         });
     });
 };
 
-// 删除模型
-PhotoFit.prototype.listenRemoveModelEvent = function (photoItem) {
-    var self = this;
-    var modelCloseBtn = photoItem.find('.close-model-btn');
-
-    modelCloseBtn.click(function () {
-        var modelId = photoItem.attr("data-model-id");
-        console.log(modelId);
-
-        if (modelId) {
-            antalert.alertConfirm({
-            'text': '您确定要删除该模型吗？无法撤销哦！~~~',
-            'confirmCallback': function () {
-                antajax.post({
-                    'url': '/del/model/',
-                    'data': {
-                        'model_id': modelId,
-                    },
-                    'success': function (result) {
-                        var dataItem = photoItem.find(".data-item");
-                        dataItem.remove();
-                        window.messageBox.showSuccess(result['message']);
-                    }
-                });
-            }
-        });
-        }
-    });
-};
 
 // 加载所有的模型
 PhotoFit.prototype.listenLoadAllModelEvent = function (dataItem) {
@@ -278,7 +267,7 @@ PhotoFit.prototype.listenLoadAllModelEvent = function (dataItem) {
             if (result['code'] === 200) {
                 var models = result['data'];
                 for (var i = 0; i < models.length; i++) {
-                    var url = result['data']['model_url'];
+                    var url = result['data'][i]['model_url'];
                     thumbnail.attr('src', url);
                 }
             }

@@ -76,5 +76,40 @@ PhotoFit.prototype.listenAddBannerUpEvent = function () {
         self.createPhotoBtnEvent();
     });
 };
+
+PhotoFit.prototype.listenDisplayPersonModelEvent = function (photoItem) {
+    var self = this;
+
+    var dataItem = photoItem.find(".data-item");
+
+    var modelThumbnail = photoItem.find(".modelThumbnail");
+
+    var extractDataBtn = photoItem.find(".extract-data-btn");
+
+    extractDataBtn.click(function () {
+
+        antajax.get({
+            'url': '/model/serialize/',
+            'success': function (result) {
+                if (result['code'] === 200) {
+                    // var url = result['data'][0]['model_url'];
+                    // console.log(url);
+                    // modelThumbnail.attr("src", url);
+                    // console.log(result);
+
+                    models = result['data'];
+                    for (var i = 0; i < models.length; i++) {
+                        var model = models[i];
+                        var tpl = template('photos-item', {'model': model});
+                        self.photoListGroup.append(tpl);
+                        var url = result['data'][0]['model_url'];
+                        console.log(url);
+                        modelThumbnail.attr('src', url);
+                    }
+                }
+            }
+        });
+    });
+};
 </body>
 </html>

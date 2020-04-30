@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9173a386-dde5-4d76-8240-a959147896ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/front/migrations/0002_personmodelsmodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/dist/js/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.." beforeDir="false" afterPath="$PROJECT_DIR$/.." afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/front/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/photoFit.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/photoFit.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/dist/js/photoFit.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/photoFit.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/photoFit.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/photoFit.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/js/photoFit.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/photoFit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/front/photofit.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/photofit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/front/base/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/base/other.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/personModel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/personModel.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,14 +57,14 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48014706">
+    <splitter split-orientation="horizontal" split-proportion="0.1">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="206">
-                  <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+                <state relative-caret-position="326">
+                  <caret line="103" column="85" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="85" />
                 </state>
               </provider>
             </entry>
@@ -139,14 +134,18 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+                <state relative-caret-position="270">
+                  <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
                   <folding>
-                    <element signature="e#3897#3940#0" />
-                    <element signature="e#4032#4835#0" />
+                    <element signature="e#3583#4541#0" />
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/dist/js/test.js">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -157,9 +156,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -189,35 +188,24 @@
         <option value="$PROJECT_DIR$/front/templates/front/index.html" />
         <option value="$PROJECT_DIR$/apps/front/forms.py" />
         <option value="$PROJECT_DIR$/front/templates/front/storageRoom.html" />
-        <option value="$PROJECT_DIR$/front/templates/front/base/other.html" />
         <option value="$PROJECT_DIR$/front/templates/front/base/front_base.html" />
         <option value="$PROJECT_DIR$/apps/front/models.py" />
         <option value="$PROJECT_DIR$/apps/front/serializers.py" />
         <option value="$PROJECT_DIR$/apps/front/urls.py" />
         <option value="$PROJECT_DIR$/apps/front/views.py" />
-        <option value="$PROJECT_DIR$/front/src/js/photoFit.js" />
         <option value="$PROJECT_DIR$/front/src/css/photoFit.scss" />
         <option value="$PROJECT_DIR$/front/templates/front/photofit.html" />
+        <option value="$PROJECT_DIR$/front/templates/front/base/other.html" />
+        <option value="$PROJECT_DIR$/front/src/js/photoFit.js" />
+        <option value="$PROJECT_DIR$/front/dist/js/test.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/D3.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
-        <option value="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-199" />
-    <option name="y" value="156" />
-    <option name="width" value="1873" />
-    <option name="height" value="943" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-434" />
+    <option name="y" value="136" />
+    <option name="width" value="1270" />
+    <option name="height" value="965" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -265,6 +253,13 @@
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
               <item name="D3" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,6 +268,27 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
@@ -369,23 +385,23 @@
       <workItem from="1588152517796" duration="6515000" />
       <workItem from="1588159630106" duration="14609000" />
       <workItem from="1588223524037" duration="1868000" />
-      <workItem from="1588228951001" duration="20023000" />
+      <workItem from="1588228951001" duration="26921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87788000" />
+    <option name="totallyTimeSpent" value="94686000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="122" width="1498" height="754" extended-state="0" />
+    <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.097222224" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12466488" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933156" weight="0.54501605" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933156" weight="0.1881029" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -395,7 +411,7 @@
       <window_info anchor="bottom" id="manage.py@D3" order="9" weight="0.329582" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.329582" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50066847" side_tool="true" weight="0.32636657" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.24758843" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2181303" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -528,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/front/base/other.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mediapersonModel.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -592,17 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding>
-            <element signature="e#3897#3940#0" />
-            <element signature="e#4032#4835#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/css/photoFit.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -612,8 +610,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+        <state relative-caret-position="326">
+          <caret line="103" column="85" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/front/base/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="112" column="2" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/js/test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+          <folding>
+            <element signature="e#3583#4541#0" />
+          </folding>
         </state>
       </provider>
     </entry>
