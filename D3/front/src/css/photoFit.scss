@@ -1,0 +1,66 @@
+.row {
+
+  .box-primary {
+
+    .col-md-12 {
+
+      .btn-photos {
+        float: left;
+        margin-top: 20px;
+      }
+
+      .tips {
+        margin-top: 20px;
+        float: left;
+      }
+    }
+  }
+}
+
+.photos-item {
+  width: 300px;
+
+  .box-header {
+
+    .close-btn {
+      // 清除按钮点击时的颜色
+      outline: none;
+      // 清除按钮的高度
+      border: none;
+    }
+  }
+  .box-body {
+    .thumbnail-group {
+      width: 100%;
+
+      .thumbnail {
+        width: 260px;
+        height: 340px;
+      }
+    }
+  }
+}
+
+.data-item {
+  width: 300px;
+
+  .box-header {
+
+    .close-btn {
+      // 清除按钮点击时的颜色
+      outline: none;
+      // 清除按钮的高度
+      border: none;
+    }
+  }
+  .box-body {
+    .thumbnail-group {
+      width: 100%;
+
+      .thumbnail {
+        width: 260px;
+        height: 340px;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>衣吧{% block title %}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1347266_1120imkhssrc.css">
+    <link rel="shortcut icon" href="{% static "images/favicon.min.ico" %}"/>
+    <link rel="stylesheet" href="{% static 'adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminlte/bower_components/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skins/AdminLTE.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skins/_all-skins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'sweetalert/sweetalert.css' %}">
+    <script src="{% static 'adminlte/maxcdn/html5shiv/html5shiv.min.js' %}"></script>
+    <script src="{% static 'adminlte/maxcdn/respond/respond.min.js' %}"></script>
+    <script src="{% static 'adminlte/bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/adminlte/js/adminlte.min.js' %}"></script>
+    <script src="{% static 'js/adminlte/js/demo.js' %}"></script>
+    <script src="{% static 'sweetalert/sweetalert.min.js' %}"></script>
+    <script src="{% static 'js/antajax.min.js' %}"></script>
+    <script src="{% static 'js/antalert.min.js' %}"></script>
+    <script src="{% static 'js/message.min.js' %}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <header class="main-header">
+        <a href="#" class="logo">
+            <span class="logo-mini"><b>衣吧</b></span>
+            <span class="logo-lg">
+                <i class="icon-Txu iconfont fa-lg"></i>秒试<b>衣吧</b></span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{% static 'images/avatar/avatar7.jpg' %}" class="user-image"
+                                 alt="User Image">
+                            <span class="hidden-xs">孤烟逐云zjy</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <img src="{% static 'images/avatar/avatar7.jpg' %}" class="img-circle" alt="User Image"
+                                     style="width: 80px; height: 80px; border-radius: 50%">
+                                <p>
+                                    孤烟逐云zjy - Web Developer
+                                    <small>Member since Nov. 2019</small>
+                                </p>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">个人中心</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">退出登录</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="{% static 'images/avatar/avatar7.jpg' %}" class="img-circle" alt="User Image" style="width: 40px; height: 40px; border-radius: 50%">
+                </div>
+                <div class="pull-left info">
+                    <p>孤烟逐云zjy</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa  fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+            <li class="header" style="color: white">衣吧试衣</li>
+            <li>
+                <a href="{% url 'front:photoFit' %}">
+                    <i class="fa fa-picture-o"></i>
+                    <span>照片建模</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'front:storage_room' %}">
+                    <i class="fa fa-odnoklassniki"></i>
+                    <span>储衣间</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-female"></i>
+                    <span>模型试衣间</span>
+                </a>
+            </li>
+                {% block sidebar-menu %}{% endblock %}
+            </ul>
+        </section>
+    </aside>
+    <div class="content-wrapper">
+        <section class="content-header">
+            {% block content-header %}{% endblock %}
+        </section>
+
+        <section class="content">
+            {% block content %}{% endblock %}
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.18
+        </div>
+            <strong>Copyright &copy; 2020-2021 <b>秒试衣吧</b></strong> All rights reserved.
+    </footer>
+    <div class="control-sidebar-bg"></div>
+</div>
+</body>
+</html>

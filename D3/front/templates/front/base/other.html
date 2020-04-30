@@ -1,0 +1,96 @@
+<!--
+  * @Description: other.html
+  * @Author: 孤烟逐云zjy
+  * @Date: 2020/4/29 16:27
+  * @SoftWare: PyCharm
+  * @CSDN: https://blog.csdn.net/zjy123078_zjy
+  * @博客园: https://www.cnblogs.com/guyan-2020/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-md-12" style="margin-top: 20px">
+            <ul>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price pull-right"><span class="free">免费</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price pull-right"><span class="free">免费</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price pull-right"><span class="free">免费</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">该做什么呢？</div>
+                    <div class="more-detail">
+                        <span class="author">孤烟逐云</span>
+                    <p class="price pull-right"><span class="free">免费</span></p>
+                    </div>
+                </div>
+                </a></li>
+            </ul>
+
+        </div>
+
+<div class="box data-item pull-left" style="margin-left: 40px;">
+                <div class="box-header">
+                    <span class="pub-time">模型提取时间：</span>
+                    <button class="btn-default btn-xs pull-right close-btn">
+                        <i class="fa fa-close"></i>
+                    </button>
+                </div>
+                <div class="box-body">
+                    <div class="thumbnail-group">
+                        <img src="/static/images/AntModel03.min.jpg" alt="" class="thumbnail"
+                             style="cursor: pointer; margin-left: 10px;">
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button class="btn btn-primary pull-right save-btn">保存模型</button>
+                </div>
+            </div>
+
+
+// 限制只能上传6张轮播图事件
+PhotoFit.prototype.listenAddBannerUpEvent = function () {
+    var self = this;
+    var addBtn = $("#add-photo-btn");
+    addBtn.click(function () {
+        var photoListGroup = $(".photos-list-group");
+        var photoLength = photoListGroup.children().length;
+        if (photoLength >= 6) {
+            window.messageBox.showInfo("只能添加6张照片哦！");
+            return;
+        }
+        self.createPhotoBtnEvent();
+    });
+};
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!--
+  * @Description: storageRoom.html
+  * @Author: 孤烟逐云zjy
+  * @Date: 2020/4/29 16:22
+  * @SoftWare: PyCharm
+  * @CSDN: https://blog.csdn.net/zjy123078_zjy
+  * @博客园: https://www.cnblogs.com/guyan-2020/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{% extends 'front/base/front_base.html' %}
+
+{% block title %}
+    | 储衣间
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block content-header %}
+    <h1 class="-th-large"><strong>衣吧</strong>储衣间</h1>
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+    <div class="box box-primary">
+        <div class="col-md-12" style="margin-top: 20px">
+            <ul>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">裤子</div>
+                    <div class="more-detail">
+                        <span class="author"><a href="{% url 'front:front_index' %}">衣吧</a></span>
+                    <p class="price pull-right"><span class="free">加入试衣间</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">裤子</div>
+                    <div class="more-detail">
+                        <span class="author"><a href="{% url 'front:front_index' %}">衣吧</a></span>
+                    <p class="price pull-right"><span class="free">加入试衣间</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">外套</div>
+                    <div class="more-detail">
+                        <span class="author"><a href="{% url 'front:front_index' %}">衣吧</a></span>
+                    <p class="price pull-right"><span class="free">加入试衣间</span></p>
+                    </div>
+                </div>
+                </a></li>
+                <li class="col-md-3" style="list-style: none"><a href="#">
+                <div class="thumbnail">
+                    <img class="thumbnail" src="{% static "images/news/news.min.jpg" %}/" alt="">
+                    <div class="desc">外套</div>
+                    <div class="more-detail">
+                        <span class="author"><a href="{% url 'front:front_index' %}">衣吧</a></span>
+                    <p class="price pull-right"><span class="free">加入试衣间</span></p>
+                    </div>
+                </div>
+                </a></li>
+            </ul>
+
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

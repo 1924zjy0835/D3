@@ -1,0 +1,87 @@
+{% extends 'front/base/front_base.html' %}
+
+{% block title %}
+    | 照片建模
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/photoFit.min.css' %}">
+    <script src="{% static 'arttemplate/template-web.js' %}"></script>
+    <script src="{% static 'js/photoFit.min.js' %}"></script>
+
+{% endblock %}
+
+
+{% block content-header %}
+    <h1>照片建模</h1>
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="box box-primary">
+            <div class="col-md-12">
+                <div class="btn-photos">
+                    <button class="btn btn-warning" id="add-photo-btn">
+                        <i class="fa fa-plus">上传照片</i>
+                    </button>
+                </div>
+                <ul class="tips pull-left">
+                    <li>支持JPG,GIF,PNG格式图片，最多可上传6张图片</li>
+                    <li>比例4:1，宽度在800px以上，5M以内</li>
+                </ul>
+                <ul class="tips pull-left">
+                    <li>上传照片之后，保存成功即可提取图片人体模型</li>
+                    <li>上传自己的全身照（注意，一定要上传真实照片哦！否者会影响试穿的衣服效果）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="photos-list-group">
+        {% csrf_token %}
+    </div>
+    <!--
+    <div class="data-list-group pull-left" style="margin-left: 40px;">
+    </div>
+    -->
+    <!--注意这里只能是使用id,不能够使用class,否者的话，在使用arttemplate添加框架的时候，就不够找到-->
+    <script id="photos-item" type="text/html">
+        {% verbatim %}
+        {{ if photo }}
+        <div class="box photos-item" data-photo-id="{{ photo.id }}">
+            {{ else }}
+            <div class="box photos-item">
+                {{ /if }}
+                <div class="box-header">
+                    {{ if photo }}
+                    <span class="pub-time">照片发布顺序：{{ photo.id }}</span>
+                    {{ else }}
+                    <span class="pub-time">照片发布顺序：0</span>
+                    {{ /if }}
+                    <button class="btn-default btn-xs pull-right close-btn">
+                        <i class="fa fa-close"></i>
+                    </button>
+                </div>
+                <div class="box-body">
+                    <div class="thumbnail-group">
+
+                        {{ if photo }}
+                        <!--注意这里不能够识别Django语法，只能够使用静态文件路径的方式-->
+                        <img src="{{ photo.img_url }}" alt="" class="thumbnail"
+                             style="cursor: pointer; margin-left: 10px;">
+                        {{ else }}
+                        <!--注意这里不能够识别Django语法，只能够使用静态文件路径的方式-->
+                        <input type="file" class="image-input" style="display:none;">
+                        <img src="/static/images/addphoto02.min.jpg" alt="" class="thumbnail"
+                             style="cursor: pointer; margin-left: 10px;">
+                        {{ /if }}
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button class="btn btn-primary extract-data-btn">提取模型</button>
+                    <button class="btn btn-primary pull-right save-btn">保存图片</button>
+                </div>
+            </div>
+            {% endverbatim %}
+    </script>
+{% endblock %}
