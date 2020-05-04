@@ -2,13 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9173a386-dde5-4d76-8240-a959147896ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/dist/js/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/CNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/FAST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/Harris.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/ORB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/SIFT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/ShiTomasi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/canny.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/algorithm/skeletonize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/templates/front/modelFittingRoom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.." beforeDir="false" afterPath="$PROJECT_DIR$/.." afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/D3/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/D3/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/front/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/front/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/front/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/photoFit.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/photoFit.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/dist/js/photoFit.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/js/photoFit.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/photoFit.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/photoFit.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/js/photoFit.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/js/photoFit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/front/base/other.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/base/other.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/personModel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/personModel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/front/base/front_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/base/front_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/front/photofit.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/photofit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/front/storageRoom.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/front/storageRoom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatart5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatart6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/girl01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/handsomeboy01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/news3.min.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/personModel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photo01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photo02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photo03.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,36 +83,26 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.1">
+    <splitter split-orientation="horizontal" split-proportion="0.5412758">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
+            <entry file="file://$PROJECT_DIR$/apps/algorithm/ORB.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="103" column="85" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="85" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/src/css/photoFit.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/front/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+                <state relative-caret-position="165">
+                  <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
                   <folding>
-                    <element signature="e#0#54#0" expanded="true" />
-                    <element signature="e#872#1269#0" />
+                    <element signature="e#178#194#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-121234755/cv2/cv2/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="148">
+                  <caret line="8716" column="42" selection-start-line="8716" selection-start-column="31" selection-end-line="8716" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -104,25 +120,76 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/front/urls.py">
+            <entry file="file://$PROJECT_DIR$/apps/algorithm/SIFT.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="26" />
+                <state relative-caret-position="131">
+                  <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
                   <folding>
-                    <element signature="e#0#28#0" expanded="true" />
+                    <element signature="e#178#194#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
+            <entry file="file://$PROJECT_DIR$/apps/algorithm/canny.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+                <state relative-caret-position="330">
+                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
                   <folding>
-                    <element signature="e#0#24#0" expanded="true" />
+                    <element signature="e#179#195#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/algorithm/skeletonize.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="227">
+                  <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+                  <folding>
+                    <element signature="e#184#200#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/apps/front/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1785">
+                  <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#0#54#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/css/photoFit.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="780">
+                  <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3915">
+                  <caret line="261" column="32" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -132,20 +199,15 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
+            <entry file="file://$PROJECT_DIR$/apps/front/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+                <state relative-caret-position="240">
+                  <caret line="115" column="23" lean-forward="true" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
                   <folding>
-                    <element signature="e#3583#4541#0" />
+                    <element signature="e#0#54#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/front/dist/js/test.js">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -156,9 +218,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -170,6 +232,9 @@
       <find>createPhotoBtnEvent</find>
       <find>photo/</find>
       <find>model</find>
+      <find>cv2</find>
+      <find>p</find>
+      <find>modelThumbnail.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,28 +249,39 @@
         <option value="$PROJECT_DIR$/utils/captcha/restful.py" />
         <option value="$PROJECT_DIR$/D3/urls.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/D3/settings.py" />
         <option value="$PROJECT_DIR$/front/templates/front/index.html" />
         <option value="$PROJECT_DIR$/apps/front/forms.py" />
-        <option value="$PROJECT_DIR$/front/templates/front/storageRoom.html" />
-        <option value="$PROJECT_DIR$/front/templates/front/base/front_base.html" />
         <option value="$PROJECT_DIR$/apps/front/models.py" />
         <option value="$PROJECT_DIR$/apps/front/serializers.py" />
+        <option value="$PROJECT_DIR$/front/templates/front/base/other.html" />
+        <option value="$PROJECT_DIR$/front/dist/js/test.js" />
+        <option value="$PROJECT_DIR$/D3/settings.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/CNN.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/canny.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/Shi-Tomasi.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/ShiTomasi.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/Harris.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/SIFT.py" />
         <option value="$PROJECT_DIR$/apps/front/urls.py" />
-        <option value="$PROJECT_DIR$/apps/front/views.py" />
+        <option value="$PROJECT_DIR$/front/templates/front/base/front_base.html" />
+        <option value="$PROJECT_DIR$/front/templates/front/storageRoom.html" />
+        <option value="$PROJECT_DIR$/front/src/js/photoFit.js" />
         <option value="$PROJECT_DIR$/front/src/css/photoFit.scss" />
         <option value="$PROJECT_DIR$/front/templates/front/photofit.html" />
-        <option value="$PROJECT_DIR$/front/templates/front/base/other.html" />
-        <option value="$PROJECT_DIR$/front/src/js/photoFit.js" />
-        <option value="$PROJECT_DIR$/front/dist/js/test.js" />
+        <option value="$PROJECT_DIR$/front/templates/front/modelFittingRoom.html" />
+        <option value="$PROJECT_DIR$/apps/algorithm/fast.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/FAST.py" />
+        <option value="$PROJECT_DIR$/apps/front/views.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/skeletonize.py" />
+        <option value="$PROJECT_DIR$/apps/algorithm/ORB.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-434" />
-    <option name="y" value="136" />
-    <option name="width" value="1270" />
-    <option name="height" value="965" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="690" />
+    <option name="y" value="392" />
+    <option name="width" value="1615" />
+    <option name="height" value="924" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -229,7 +305,18 @@
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
               <item name="D3" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
@@ -241,6 +328,13 @@
               <item name="D3" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
@@ -254,7 +348,8 @@
               <item name="D3" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
@@ -268,6 +363,13 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="D3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="D3" type="b2602c69:ProjectViewProjectNode" />
@@ -335,6 +437,50 @@
     <configuration name="photofit.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/D3/front/templates/front/photofit.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="Harris" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="D3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/algorithm/Harris.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="skeletonize" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="D3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/algorithm/skeletonize.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="D3" type="Python.DjangoServer" factoryName="Django server" singleton="false">
       <module name="D3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -361,6 +507,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.skeletonize" />
+        <item itemvalue="Python.Harris" />
         <item itemvalue="JavaScript Debug.photofit.html" />
       </list>
     </recent_temporary>
@@ -385,23 +533,31 @@
       <workItem from="1588152517796" duration="6515000" />
       <workItem from="1588159630106" duration="14609000" />
       <workItem from="1588223524037" duration="1868000" />
-      <workItem from="1588228951001" duration="26921000" />
+      <workItem from="1588228951001" duration="28141000" />
+      <workItem from="1588295684679" duration="233000" />
+      <workItem from="1588299459169" duration="149000" />
+      <workItem from="1588300746463" duration="2180000" />
+      <workItem from="1588318255470" duration="12000" />
+      <workItem from="1588321473341" duration="2383000" />
+      <workItem from="1588380601451" duration="1364000" />
+      <workItem from="1588465732689" duration="9914000" />
+      <workItem from="1588489213062" duration="13656000" />
+      <workItem from="1588544369066" duration="6589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94686000" />
+    <option name="totallyTimeSpent" value="132153000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="552" y="314" width="1292" height="739" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12466488" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13614263" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933156" weight="0.1881029" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933156" visible="true" weight="0.21911038" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -411,7 +567,7 @@
       <window_info anchor="bottom" id="manage.py@D3" order="9" weight="0.329582" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.329582" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50066847" side_tool="true" weight="0.32636657" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2181303" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32673267" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -447,6 +603,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/D3$Harris.coverage" NAME="Harris Coverage Results" MODIFIED="1588468866091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/algorithm" />
+    <SUITE FILE_PATH="coverage/D3$skeletonize.coverage" NAME="skeletonize Coverage Results" MODIFIED="1588545196729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/algorithm" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/front/gulpfile.js">
@@ -500,6 +660,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/js/message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="96" column="15" lean-forward="true" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mediapersonModel.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/personModel.jpg" />
+    <entry file="file://$PROJECT_DIR$/apps/front/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="72" column="23" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/front/base/other.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="112" column="2" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/js/test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/Harris.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="e#180#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/ShiTomasi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#183#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D3/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/D3/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -510,62 +736,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/message.js">
+    <entry file="file://$PROJECT_DIR$/apps/front/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="96" column="15" lean-forward="true" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/D3/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="135">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/CNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#177#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/front/base/front_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="121" column="33" lean-forward="true" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#strong#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mediapersonModel.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/personModel.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/front/storageRoom.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="68" column="74" selection-start-line="68" selection-start-column="74" selection-end-line="68" selection-end-column="74" />
+        <state relative-caret-position="180">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
           <folding>
-            <element signature="e#2434#2458#0#HTML" expanded="true" />
+            <element signature="e#847#928#0#HTML" expanded="true" />
+            <element signature="e#1415#1496#0#HTML" expanded="true" />
+            <element signature="e#1982#2063#0#HTML" expanded="true" />
+            <element signature="e#2551#2631#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/models.py">
+    <entry file="file://$PROJECT_DIR$/front/dist/css/photoFit.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/photo01.min.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/photo03.min.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/girl01.min.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/handsomeboy01.min.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/images/AntModel03.min.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/modelPerson.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/modelPerson10.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/modelPerson1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/modelPerson02.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/FAST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#178#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/front/modelFittingRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
+          <folding>
+            <element signature="e#430#455#0#HTML" expanded="true" />
+            <element signature="e#459#497#0#HTML" expanded="true" />
+            <element signature="e#505#562#0#HTML" expanded="true" />
+            <element signature="e#808#844#0#HTML" expanded="true" />
+            <element signature="e#1285#1357#0#HTML" expanded="true" />
+            <element signature="e#1893#1950#0#HTML" expanded="true" />
+            <element signature="e#2315#2351#0#HTML" expanded="true" />
+            <element signature="e#2874#2946#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/photoFit.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3915">
+          <caret line="261" column="32" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/canny.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#179#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/skeletonize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding>
+            <element signature="e#184#200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,57 +884,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/SIFT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#178#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/front/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="1785">
+          <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
-            <element signature="e#872#1269#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/front/urls.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-121234755/cv2/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="148">
+          <caret line="8716" column="42" selection-start-line="8716" selection-start-column="31" selection-end-line="8716" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/algorithm/ORB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/photoFit.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/front/photofit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="103" column="85" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/front/base/other.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="112" column="2" selection-start-line="112" selection-start-column="2" selection-end-line="112" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/dist/js/test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/js/photoFit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-          <folding>
-            <element signature="e#3583#4541#0" />
+            <element signature="e#178#194#0" expanded="true" />
           </folding>
         </state>
       </provider>

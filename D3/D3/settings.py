@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'apps.front',
     'rest_framework',
+    'apps.algorithm'
 ]
 
 MIDDLEWARE = [

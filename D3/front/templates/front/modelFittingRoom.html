@@ -1,0 +1,67 @@
+{% extends 'front/base/front_base.html' %}
+
+{% block title %}
+    | 模型试衣间
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/photoFit.min.css' %}">
+{% endblock %}
+
+{% block content-header %}
+    <h1 class="-th-large"><strong>衣吧 </strong>模型试衣间</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="box box-primary">
+            <div class="col-md-12">
+                <ul style="overflow: hidden;">
+                        <li style="list-style: none; float: left;">
+                            <div class="box" style="margin-top: 20px; width: 300px;">
+                                <div class="box-header">
+                                    <span class="pub-time">模型：{{ model.pk }}</span>
+                                    <button class="btn-default btn-xs pull-right close-btn"
+                                            style="outline: none; border: none;">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                                <div class="box-body">
+                                    <div class="thumbnail-group">
+                                        <!--注意这里不能够识别Django语法，只能够使用静态文件路径的方式-->
+                                        <img src="http://127.0.0.1:8088/media/modelPerson.jpg" alt="" class="thumbnail"
+                                             style="cursor: pointer; margin-left: 10px; width: 260px; height: 340px;">
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <button class="btn btn-primary pull-right model-fit-btn">模型试衣</button>
+                                </div>
+                            </div>
+                        </li>
+                    <li style="list-style: none; float: left; margin-left: 20px;">
+                            <div class="box" style="margin-top: 20px; width: 300px;">
+                                <div class="box-header">
+                                    <span class="pub-time">模型：{{ model.pk }}</span>
+                                    <button class="btn-default btn-xs pull-right close-btn"
+                                            style="outline: none; border: none;">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+                                </div>
+                                <div class="box-body">
+                                    <div class="thumbnail-group">
+                                        <!--注意这里不能够识别Django语法，只能够使用静态文件路径的方式-->
+                                        <img src="http://127.0.0.1:8088/media/modelPerson10.jpg" alt="" class="thumbnail"
+                                             style="cursor: pointer; margin-left: 10px; width: 260px; height: 340px;">
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <button class="btn btn-primary pull-right model-fit-btn">模型试衣</button>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

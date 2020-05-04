@@ -114,7 +114,7 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
         // photoItem.remove();
         var photoId = photoItem.attr("data-photo-id");
 
-        var modelItem = self.photoListGroup.find(".data-item");
+
 
         if (photoId) {
             antalert.alertConfirm({
@@ -127,7 +127,6 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
                         },
                         'success': function (result) {
                             photoItem.remove();
-                            modelItem.remove();
                             window.messageBox.showSuccess(result['message']);
                         }
                     });
@@ -135,6 +134,28 @@ PhotoFit.prototype.listenCloseBtnEvent = function (photoItem) {
             });
         } else {
             photoItem.remove();
+        }
+
+        var modelItem = self.photoListGroup.find(".data-item");
+        modelId = photoItem.attr("data-model-id");
+
+        console.log(modelId);
+        if (modelId) {
+            antalert.alertConfirm({
+                'confirmCallback': function () {
+                    antajax.post({
+                        'url': '/del/model/',
+                        'data': {
+                            'model_id': modelId,
+                        },
+                        'success': function (result) {
+                            modelItem.remove();
+                            // window.messageBox.showSuccess(result['message']);
+                        }
+                    });
+                }
+            });
+        } else {
             modelItem.remove();
         }
     });
@@ -242,14 +263,13 @@ PhotoFit.prototype.listenDisplayPersonModelEvent = function (photoItem) {
                         var tpl = template('photos-item', {'model': model});
                         self.photoListGroup.append(tpl);
                         url = result['data'][i]['model_url'];
-                        console.log(url);
-                        modelThumbnail.attr('src', url);
+                            modelThumbnail.attr('src', url);
+                        }
                     }
 
                     // url = result['data'][0]['model_url'];
                     // modelThumbnail.attr("src", url);
                 }
-            }
         });
     });
 };

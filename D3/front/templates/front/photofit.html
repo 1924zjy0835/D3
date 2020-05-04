@@ -13,7 +13,7 @@
 
 
 {% block content-header %}
-    <h1>照片建模</h1>
+    <h1 class="-th-large"><strong>衣吧 </strong>照片建模</h1>
 {% endblock %}
 
 
@@ -87,13 +87,10 @@
                     {{ /if }}
                     <div class="box-header">
                         {{ if model }}
-                        <span class="pub-time">模型提取时间：{{ model.pub_time }}</span>
+                        <span class="pub-time">模型提取时间：{{ model.id }}</span>
                         {{ else }}
                         <span class="pub-time">示例模型</span>
                         {{ /if }}
-                        <button class="btn-default btn-xs pull-right close-model-btn">
-                            <i class="fa fa-close"></i>
-                        </button>
                     </div>
                     <div class="box-body">
                         <div class="thumbnail-group">
@@ -110,6 +107,7 @@
                         <button class="btn btn-primary pull-right save-btn">保存模型</button>
                     </div>
                 </div>
-                {% endverbatim %}
+            </div>
+            {% endverbatim %}
     </script>
 {% endblock %}
